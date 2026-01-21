@@ -3,7 +3,7 @@ const app = express();
 const PORT = 3000;
 app.get("/", (req, res) => {
     res.json({
-        message: "App working sucessfully"
+        message: "App is working fine now.... Let's start the work"
     })
 });
 
