@@ -17,7 +17,9 @@ jobs:
 
       -name: Install Dependencies
       run: npm Install
+      working-directory: january/jvl\ code\ devops\ basics
 
       -name: Run tests
       run: npm test 
+      working-directory: january/jvl\ code\ devops\ basics
 
