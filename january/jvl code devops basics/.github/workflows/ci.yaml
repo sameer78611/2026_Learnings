@@ -3,23 +3,25 @@ name: CI Pipeline
 on:
   push:
     branches:
-      -main
+      - main
 
 jobs:
   test:
-    runs-On: ubuntu-latest
+    runs-on: ubuntu-latest
+
     steps:
-      -name: checkout code
-      uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-      -name: setup node jobs
-      uses: actions/setup-node@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
 
-      -name: Install Dependencies
-      run: npm Install
-      working-directory: january/jvl\ code\ devops\ basics
+      - name: Install dependencies
+        run: npm install
+        working-directory: "january/jvl code devops basics"
 
-      -name: Run tests
-      run: npm test 
-      working-directory: january/jvl\ code\ devops\ basics
-
+      - name: Run tests
+        run: npm test
+        working-directory: "january/jvl code devops basics"
